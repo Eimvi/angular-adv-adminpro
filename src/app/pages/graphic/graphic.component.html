@@ -1,1 +1,23 @@
-<p>graphic works!</p>
+<div>
+  <div class="row">
+    <div class="col-6">
+      <app-donut title="Ventas"></app-donut>
+    </div>
+    <div class="col-6">
+      <app-donut [labels]="labels1"
+                  [data]="data1"
+                  [colors]="colors1"
+                  title="Compras"
+                  ></app-donut>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <app-donut title="Cambios"></app-donut>
+    </div>
+    <div class="col-6">
+      <app-donut title="Eliminados"></app-donut>
+    </div>
+  </div>
+</div>
