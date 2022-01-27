@@ -6,14 +6,18 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
 import { GraphicComponent } from './graphic/graphic.component';
 import { PagesComponent } from './pages.component';
+import { PromisesComponent } from './promises/promises.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: PagesComponent,
   children: [
-    { path: '', component: DashboardComponent },
-    { path: 'progress', component: ProgressComponent },
-    { path: 'graphic', component: GraphicComponent },
-    { path: 'account-settings', component: AccountSettingsComponent },
+    { path: '', component: DashboardComponent, data: { title: 'Dashboard'} },
+    { path: 'progress', component: ProgressComponent, data: { title: 'Progress'} },
+    { path: 'graphic', component: GraphicComponent, data: { title: 'Graphic'} },
+    { path: 'account-settings', component: AccountSettingsComponent, data: { title: 'Account Settings'} },
+    { path: 'promises', component: PromisesComponent, data: { title: 'Promises'} },
+    { path: 'rxjs', component: RxjsComponent, data: { title: 'RxJs'} },
   ]},];
 
 @NgModule({
